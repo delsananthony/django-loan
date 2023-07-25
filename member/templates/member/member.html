@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.3"
+        integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="{{ form.firstname.id_for_label }}">Firstname:
+            {{form.firstname}}
+        </label>
+        <label for="{{ form.lastname.id_for_label }}">Lastname:
+            {{form.lastname}}
+        </label>
+        <label for="{{ form.middlename.id_for_label }}">Middlename:
+            {{form.middlename}}
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
